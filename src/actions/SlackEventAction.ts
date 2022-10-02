@@ -1,8 +1,10 @@
+import { StoreItem } from './../types/StoreType.d';
 import { OnEventMessage } from './../types/SlackTypes.d';
 import { WebClient } from '@slack/web-api';
 
 // 생성한 슬랙봇에 대한 키값들
 import CONFIG from '../config/bot.json';
+import STORE_LIST from '../config/store-list.json';
 
 export class SlackEventAction {
   private webClient;
@@ -14,11 +16,29 @@ export class SlackEventAction {
   async handleMessageEvent(event: OnEventMessage) {
     const commands = event.text.split(' ');
 
-    if (commands[0] === '추천') {
+    if (commands[0] === '랜덤') {
+      const store = this.getRandomStore();
+
       this.webClient.chat.postMessage({
-        text: '나는 봇이야!!!',
+        text: this.getStoreText(store),
         channel: event.channel,
       });
     }
+  }
+
+  getRandomStore() {
+    const storeCount = STORE_LIST.length;
+    const randomNumber = Math.floor(Math.random() * 100) % storeCount;
+
+    return STORE_LIST[randomNumber];
+  }
+
+  getStoreText(store: StoreItem) {
+    return `
+        이름: ${store.name}
+        타입: ${store.type}
+        url: ${store.url}
+        키워드: ${store.keyword}
+    `;
   }
 }

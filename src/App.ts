@@ -15,11 +15,13 @@ const slackEvents = createEventAdapter(CONFIG.SIGNING_SECRET);
 const actions = new SlackEventAction();
 
 slackEvents.on('message', (event: OnEventMessage) => {
+  console.log(event);
+
   actions.handleMessageEvent(event);
 });
 
-// 메지지 이벤트 엔드포인트를 express 에 등록하기
 app.use('/slack/events', slackEvents.requestListener());
+// 메지지 이벤트 엔드포인트를 express 에 등록하기
 
 // express 웹 서버 실행
 createServer(app).listen(3000, () => {
