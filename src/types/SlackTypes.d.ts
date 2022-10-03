@@ -9,4 +9,5 @@ export interface OnEventMessage {
   channel: string;
   event_ts: string;
   channel_type: string;
+  bot_profile?: Object;
 }
