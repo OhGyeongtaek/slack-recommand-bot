@@ -27,6 +27,14 @@
   "dependencies": {
     "@slack/events-api": "^3.0.1",
     "@slack/web-api": "^6.7.2",
-    "express": "^4.18.1"
+    "@types/google-spreadsheet": "^3.3.0",
+    "add": "^2.0.6",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.1",
+    "google-spreadsheet": "^3.3.0",
+    "node-fetch": "^3.3.0",
+    "or": "^0.2.0",
+    "request": "^2.88.2",
+    "yarn": "^1.22.19"
   }
 }
