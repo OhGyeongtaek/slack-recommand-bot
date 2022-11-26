@@ -19,6 +19,10 @@ console.log(
   CONFIG.BOT_USER_OAUTH_ACCESS_TOKEN
 );
 
+app.get('/', (req, res) => {
+  res.send('hello world');
+});
+
 slackEvents.on('message', (event: OnEventMessage) => {
   console.log(event);
 
