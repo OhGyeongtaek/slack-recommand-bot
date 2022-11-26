@@ -15,6 +15,8 @@ const slackEvents = createEventAdapter(CONFIG.SIGNING_SECRET);
 const actions = new SlackEventAction();
 
 slackEvents.on('message', (event: OnEventMessage) => {
+  console.log(event);
+
   actions.handleMessageEvent(event);
 });
 
