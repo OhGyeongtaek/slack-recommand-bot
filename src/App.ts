@@ -14,6 +14,11 @@ const slackEvents = createEventAdapter(CONFIG.SIGNING_SECRET);
 
 const actions = new SlackEventAction();
 
+console.log(
+  'BOT_USER_OAUTH_ACCESS_TOKEN :: ',
+  CONFIG.BOT_USER_OAUTH_ACCESS_TOKEN
+);
+
 slackEvents.on('message', (event: OnEventMessage) => {
   console.log(event);
 
