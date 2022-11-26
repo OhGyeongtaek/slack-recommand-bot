@@ -9,30 +9,25 @@ import path from 'path';
 
 // 생성한 슬랙봇에 대한 키값들
 import { OnEventMessage } from './types/SlackTypes';
-import AuthJson from './config/google_sheet_key.json';
 
 dotenv.config({ path: path.join(__dirname, '..', '.env') });
 
-console.log('SLACK_SIGNING_SECRET >> ', process.env.SLACK_SIGNING_SECRET);
+const app = express();
 
-console.log(AuthJson);
+const slackEvents = createEventAdapter(process.env.SLACK_SIGNING_SECRET);
 
-// const app = express();
+const actions = new SlackEventAction();
 
-// const slackEvents = createEventAdapter(process.env.SLACK_SIGNING_SECRET);
+app.get('/', (req, res) => {
+  res.send('점심 추천 봇');
+});
 
-// const actions = new SlackEventAction();
+slackEvents.on('message', (event: OnEventMessage) => {
+  actions.handleMessageEvent(event);
+});
 
-// app.get('/', (req, res) => {
-//   res.send('점심 추천 봇');
-// });
+app.use('/slack/events', slackEvents.requestListener());
 
-// slackEvents.on('message', (event: OnEventMessage) => {
-//   actions.handleMessageEvent(event);
-// });
-
-// app.use('/slack/events', slackEvents.requestListener());
-
-// createServer(app).listen(80, () => {
-//   console.log('서버오픈');
-// });
+createServer(app).listen(80, () => {
+  console.log('서버오픈');
+});
