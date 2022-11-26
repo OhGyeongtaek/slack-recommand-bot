@@ -23,11 +23,13 @@ export class SlackEventAction {
 
       if (commands[0] === '랜덤') {
         const store = this.getRandomStore();
+        console.log('시작');
 
-        this.webClient.chat.postMessage({
+        await this.webClient.chat.postMessage({
           text: this.getStoreText(store),
           channel: event.channel,
         });
+        console.log('끝');
       }
     }
   }

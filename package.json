@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "npx ts-node ./src/App.ts --no-cache",
-    "ngrok": "ngrok http 3000"
+    "serve": "npx ts-node ./src/App.ts",
+    "ngrok": "ngrok http 80"
   },
   "repository": {
     "type": "git",
