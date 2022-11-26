@@ -25,14 +25,10 @@ slackEvents.on('message', (event: OnEventMessage) => {
   actions.handleMessageEvent(event);
 });
 
-// app.get('/', (req, res) => {
-//   res.send('hello world');
-// });
+app.use('/slack/events', slackEvents.requestListener());
+// 메지지 이벤트 엔드포인트를 express 에 등록하기
 
-// app.use('/slack/events', slackEvents.requestListener());
-// // 메지지 이벤트 엔드포인트를 express 에 등록하기
-
-// // express 웹 서버 실행
-// createServer(app).listen(80, () => {
-//   console.log('서버오픈');
-// });
+// express 웹 서버 실행
+createServer(app).listen(80, () => {
+  console.log('서버오픈');
+});
