@@ -26,6 +26,6 @@ app.use('/slack/events', slackEvents.requestListener());
 // 메지지 이벤트 엔드포인트를 express 에 등록하기
 
 // express 웹 서버 실행
-createServer(app).listen(8080, () => {
+createServer(app).listen(80, () => {
   console.log('서버오픈');
 });
