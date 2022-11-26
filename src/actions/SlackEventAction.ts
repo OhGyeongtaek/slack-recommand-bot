@@ -10,7 +10,11 @@ export class SlackEventAction {
   private webClient;
 
   constructor() {
-    this.webClient = new WebClient(CONFIG.BOT_USER_OAUTH_ACCESS_TOKEN);
+    try {
+      this.webClient = new WebClient(CONFIG.BOT_USER_OAUTH_ACCESS_TOKEN);
+    } catch (e) {
+      console.log('error >> :: ', e);
+    }
   }
 
   async handleMessageEvent(event: OnEventMessage) {
