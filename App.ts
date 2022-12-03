@@ -2,15 +2,15 @@ import express from 'express';
 import { createServer } from 'http';
 import { createEventAdapter } from '@slack/events-api';
 
-import { SlackEventAction } from './actions/SlackEventAction';
+import { SlackEventAction } from './src/actions/SlackEventAction';
 
 import dotenv from 'dotenv';
 import path from 'path';
 
 // 생성한 슬랙봇에 대한 키값들
-import { OnEventMessage } from './types/SlackTypes';
+import { OnEventMessage } from './src/types/SlackTypes';
 
-dotenv.config({ path: path.join(__dirname, '..', '.env') });
+dotenv.config({ path: path.join(__dirname, '.env') });
 
 const app = express();
 
