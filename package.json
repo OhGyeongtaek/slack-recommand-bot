@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "npx ts-node ./src/App.ts",
-    "start": "pm2 start src/server.ts ",
+    "start": "pm2 start src/App.ts ",
     "ngrok": "ngrok http 80"
   },
   "repository": {
