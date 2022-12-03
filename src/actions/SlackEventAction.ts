@@ -49,7 +49,9 @@ export class SlackEventAction extends GoogleSpreadController {
     const rows = await this.getRows();
     const selectedIndex = [];
 
-    while (selectedIndex.length < limit) {
+    const limitValue = Math.min(limit, rows.length);
+
+    while (selectedIndex.length < limitValue) {
       const idx = Math.floor(Math.random() * 100) % rows.length;
 
       if (rows[idx] && !selectedIndex.includes(idx)) {
