@@ -3,5 +3,5 @@
     "resolveJsonModule": true,
     "esModuleInterop": true
   },
-  "include": ["src/*", "app.ts"]
+  "include": ["src/*", "App.ts"]
 }
