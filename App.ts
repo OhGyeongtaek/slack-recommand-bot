@@ -4,13 +4,17 @@ import { createEventAdapter } from '@slack/events-api';
 
 import { SlackEventAction } from './src/actions/SlackEventAction';
 
+import dotenv from 'dotenv';
+import path from 'path';
+
 // 생성한 슬랙봇에 대한 키값들
 import { OnEventMessage } from './src/types/SlackTypes';
-import Config from './src/config/tokens.json';
+
+dotenv.config({ path: path.join(__dirname, '.env') });
 
 const app = express();
 
-const slackEvents = createEventAdapter(Config.SLACK_SIGNING_SECRET);
+const slackEvents = createEventAdapter(process.env.SLACK_SIGNING_SECRET);
 
 const actions = new SlackEventAction();
 
