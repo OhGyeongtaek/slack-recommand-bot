@@ -4,6 +4,7 @@ import { WebClient } from '@slack/web-api';
 // 생성한 슬랙봇에 대한 키값들
 import GoogleSpreadController from './GoogleSpreadController';
 import { GoogleSpreadsheetRow } from 'google-spreadsheet';
+import Config from '../config/config.json';
 
 export class SlackEventAction extends GoogleSpreadController {
   private webClient;
@@ -11,9 +12,7 @@ export class SlackEventAction extends GoogleSpreadController {
   constructor() {
     try {
       super();
-      this.webClient = new WebClient(
-        process.env.SLACK_BOT_USER_OAUTH_ACCESS_TOKEN
-      );
+      this.webClient = new WebClient(Config.SLACK_BOT_USER_OAUTH_ACCESS_TOKEN);
     } catch (e) {
       console.log('error >> :: ', e);
     }

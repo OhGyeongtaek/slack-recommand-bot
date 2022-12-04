@@ -1,4 +1,4 @@
 /node_modules
 /.env
-/src/config/google_sheet_key.json
+/src/config
 /package-lock.json

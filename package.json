@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "npx ts-node App.ts",
-    "start": "pm2 start App.ts --watch",
+    "serve": "npx ts-node app.ts",
+    "start": "pm2 start app.ts --watch",
     "ngrok": "ngrok http 80"
   },
   "repository": {
@@ -29,7 +29,6 @@
     "@slack/events-api": "^3.0.1",
     "@slack/web-api": "^6.7.2",
     "@types/google-spreadsheet": "^3.3.0",
-    "dotenv": "^16.0.3",
     "express": "^4.18.1",
     "google-spreadsheet": "^3.3.0"
   }

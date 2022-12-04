@@ -1,11 +1,12 @@
 import { GoogleSpreadsheet, GoogleSpreadsheetRow } from 'google-spreadsheet';
 import AuthJson from '../config/google_sheet_key.json';
+import Config from '../config/config.json';
 
 export default class GoogleSpreadController {
   private doc;
 
   constructor() {
-    this.doc = new GoogleSpreadsheet(process.env.GOOGLE_SPREAD_SHEET_ID);
+    this.doc = new GoogleSpreadsheet(Config.GOOGLE_SPREAD_SHEET_ID);
   }
 
   async getRows(): Promise<GoogleSpreadsheetRow[]> {
