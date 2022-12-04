@@ -4,7 +4,7 @@ import { WebClient } from '@slack/web-api';
 // 생성한 슬랙봇에 대한 키값들
 import GoogleSpreadController from './GoogleSpreadController';
 import { GoogleSpreadsheetRow } from 'google-spreadsheet';
-import Config from '../config/config.json';
+import Config from '../config/tokens.json';
 
 export class SlackEventAction extends GoogleSpreadController {
   private webClient;

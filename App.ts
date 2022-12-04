@@ -6,7 +6,7 @@ import { SlackEventAction } from './src/actions/SlackEventAction';
 
 // 생성한 슬랙봇에 대한 키값들
 import { OnEventMessage } from './src/types/SlackTypes';
-import Config from './src/config/config.json';
+import Config from './src/config/tokens.json';
 
 const app = express();
 

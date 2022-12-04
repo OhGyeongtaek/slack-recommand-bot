@@ -1,6 +1,6 @@
 import { GoogleSpreadsheet, GoogleSpreadsheetRow } from 'google-spreadsheet';
 import AuthJson from '../config/google_sheet_key.json';
-import Config from '../config/config.json';
+import Config from '../config/tokens.json';
 
 export default class GoogleSpreadController {
   private doc;
