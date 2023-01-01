@@ -90,7 +90,19 @@ SLACK_BOT_USER_OAUTH_ACCESS_TOKEN='xoxb-xxxxxxxx...'
 GOOGLE_SPREAD_SHEET_ID=''
 ```
 
-이제 슬랙 api에서 받을 키는 모두 등록 했습니다. 이제 구글시트와 연결하면 오점뭐 사용이 가능합니다.
+해당 내용을 등록하고 로컬서버를 껐다 켜주세요.
+
+그리고 슬랙앱을 열어주세요. 점심 추천봇을 등록할 채널로 가주세요.
+
+(비공개 채널은 추천 봇이 메시지를 받지 못하는 거 같아요...)
+
+<img width="397" alt="image" src="https://user-images.githubusercontent.com/20200820/210162883-d52b4904-81ab-4f05-92e3-96442d30129b.png">
+
+그리고 등록하고 싶은 채널에 세부정보 > 통합 > 앱 > 앱추가 클릭 > 추천 봇 추가
+
+추가버튼을 클릭하면 해당 채널 채팅방에 "xxx님에 의해 #추천봇-테스트에 추가되었습니다." 라는 문구가 뜹니다.
+
+이제 구글시트와 연결하면 오점뭐 사용이 가능합니다.
 
 [구글 시트 연동하러 가기](https://github.com/OhGyeongtaek/slack-recommand-bot/blob/main/docs/%EA%B5%AC%EA%B8%80%EC%8B%9C%ED%8A%B8%20%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0.md)
 

@@ -40,6 +40,8 @@ GOOGLE_SPREAD_SHEET_ID=''
 
 ---
 
+내용이 많이 2가지 파일로 분리했습니다.
+
 ## Documents
 
 1. [슬랙 API연동하기](https://github.com/OhGyeongtaek/slack-recommand-bot/blob/main/docs/%EC%8A%AC%EB%9E%99%20API%20%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0.md)
