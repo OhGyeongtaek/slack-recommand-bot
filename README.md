@@ -47,6 +47,20 @@ GOOGLE_SPREAD_SHEET_ID=''
 1. [슬랙 API연동하기](https://github.com/OhGyeongtaek/slack-recommand-bot/blob/main/docs/%EC%8A%AC%EB%9E%99%20API%20%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0.md)
 2. [구글시트 연동하기](https://github.com/OhGyeongtaek/slack-recommand-bot/blob/main/docs/%EA%B5%AC%EA%B8%80%EC%8B%9C%ED%8A%B8%20%EC%97%B0%EB%8F%99%ED%95%98%EA%B8%B0.md)
 
+# 명령어
+
+$ㅇㅈㅁ와 $랜덤은 같은 기능을 합니다. 그냥 취향에 맞게 커맨드를 변경해 주시면 됩니다.
+
+커맨드가 정의된 파일 :: src/actions/SlackEventAction.ts(80)
+
+```
+$ㅇㅈㅁ    >> 구글시트에 있는 3개의 row를 랜덤으로 뽑아옵니다.
+$ㅇㅈㅁ:1  >> 구글시트에 있는 1개의 row를 랜덤으로 뽑아옵니다.
+
+$랜덤   >> 구글시트에 있는 3개의 row를 랜덤으로 뽑아옵니다.
+$랜덤:1 >> 구글시트에 있는 1개의 row를 랜덤으로 뽑아옵니다.
+```
+
 # 레퍼런스
 
 * [타입스크립트로 슬랙 앱(봇) 만들기 - 기초편](https://blog.gangnamunni.com/post/typescript-slack-bot/)
