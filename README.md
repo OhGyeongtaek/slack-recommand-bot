@@ -9,7 +9,7 @@
 [![Typescript](https://img.shields.io/badge/Typescript-v4.8-blue.svg)](https://www.typescriptlang.org/)
 [![ts-node](https://img.shields.io/badge/Ts_Node-v10.9-blue.svg)](https://www.npmjs.com/package/ts-node)
 
-[![Node Version](https://img.shields.io/badge/Nodejs-v16.17.1-green.svg?logo=node.js&style=flat)](https://nodejs.org)
+[![Node Version](https://img.shields.io/badge/Nodejs-18.14.0-green.svg?logo=node.js&style=flat)](https://nodejs.org)
 [![NPM Version](https://img.shields.io/badge/NPM-v9.1.2-green.svg?style=flat)](https://nodejs.org)
 [![Exoress](https://img.shields.io/badge/Express-v4.18.1-green.svg?logo=node.js&style=flat)](https://nodejs.org)
 

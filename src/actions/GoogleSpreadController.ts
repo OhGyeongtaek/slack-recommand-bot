@@ -8,11 +8,11 @@ export default class GoogleSpreadController {
     this.doc = new GoogleSpreadsheet(process.env.GOOGLE_SPREAD_SHEET_ID);
   }
 
-  async getRows(): Promise<GoogleSpreadsheetRow[]> {
+  async getRows(sheetsByIndex: number): Promise<GoogleSpreadsheetRow[]> {
     await this.doc.useServiceAccountAuth(AuthJson);
     await this.doc.loadInfo();
 
-    const sheet = this.doc.sheetsByIndex[0];
+    const sheet = this.doc.sheetsByIndex[sheetsByIndex];
 
     const rows: GoogleSpreadsheetRow[] = await sheet.getRows({
       offset: 0,
