@@ -52,7 +52,7 @@ export class SlackEventAction extends GoogleSpreadController {
     const rows = await this.getRandomRows(0);
 
     return rows
-      .slice(Math.min(limit, rows.length))
+      .slice(0, Math.min(limit, rows.length))
       .map(this.createTestaurantText)
       .join(GUIDE_LINE);
   }
