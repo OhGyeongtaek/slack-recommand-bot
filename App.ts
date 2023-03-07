@@ -28,6 +28,6 @@ slackEvents.on('message', (event: OnEventMessage) => {
 
 app.use('/slack/events', slackEvents.requestListener());
 
-createServer(app).listen(80, () => {
+createServer(app).listen(process.env.SERVER_PORT, () => {
   console.log('서버오픈');
 });
