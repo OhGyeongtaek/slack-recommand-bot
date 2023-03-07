@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "npx ts-node App.ts",
     "start": "pm2 start App.ts --watch",
-    "ngrok": "ngrok http 80"
+    "ngrok": "ngrok http 80",
+    "build": "npx tsc --build"
   },
   "repository": {
     "type": "git",
